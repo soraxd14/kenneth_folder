@@ -1,0 +1,25 @@
+/* Image Styles */
+img {
+    filter: brightness(0.8); /* Darken images in dark mode */
+}
+/* Form Inputs */
+input, textarea {
+    background-color: #333; /* Dark background for inputs */
+    color: #d2b48c; /* Light brown text for inputs */
+    border: 1px solid #444; /* Dark border */
+}
+/* Progress Bars */
+.progress-bar {
+    background-color: #d2b48c; /* Light brown for progress bars */
+}
+/* Footer */
+.footer {
+    background-color: #222; /* Darker background for footer */
+}
+/* Links */
+a {
+    color: #d2b48c; /* Light brown for links */
+}
+a:hover {
+    color: #c2a68c; /* Darker brown on hover */
+}
