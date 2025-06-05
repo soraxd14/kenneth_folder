@@ -1680,6 +1680,24 @@ section,
     gap: 10px;
   }
 }
+/* === Your main styles === */
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+/* === Maybe other styles here too === */
+
+/* === ✅ Responsive styles at the bottom === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* You can add other mobile tweaks here too */
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
