@@ -19,6 +19,52 @@ img {
   }
 }
 
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  user-select: none;
+}
+
+.faq-toggle {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-active .faq-toggle {
+  transform: rotate(90deg);
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  padding-top: 0.5rem;
+  color: #333;
+}
+
+.faq-active .faq-content {
+  /* This is handled by JavaScript dynamically (max-height) */
+}
+
 .faq-content {
   display: none;
   padding-top: 10px;
@@ -29,6 +75,11 @@ img {
 .faq-toggle {
   cursor: pointer;
   float: right;
+}
+.faq-content p {
+  user-select: text;
+  white-space: normal;
+  line-height: 1.6;
 }
 
 
