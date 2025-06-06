@@ -1,10 +1,3 @@
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 10px;
-}
-
 
 img {
     filter: brightness(0.8); /* Darken images in dark mode */
@@ -15,17 +8,13 @@ input, textarea {
     color: #d2b48c; /* Light brown text for inputs */
     border: 1px solid #444; /* Dark border */
 }
+/* Progress Bars */
 .progress-bar {
-  height: 10px;
-  background-color: #007bff; /* Customize color */
-  transition: width 1.5s ease-in-out;
-  border-radius: 5px;
+    background-color: #d2b48c; /* Light brown for progress bars */
 }
-.progress-bar-wrap {
-  background: #e0e0e0;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
+/* Footer */
+.footer {
+    background-color: #222; /* Darker background for footer */
 }
 
 }
