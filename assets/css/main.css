@@ -1,6 +1,27 @@
-
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 img {
     filter: brightness(0.8); /* Darken images in dark mode */
+}
+
+@media screen and (max-width: 768px) {
+  .left-box, .right-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .profile-pic {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+button, a {
+  padding: 12px 20px;
+  font-size: 1rem;
 }
 /* Form Inputs */
 input, textarea {
