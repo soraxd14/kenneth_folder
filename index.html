@@ -35,11 +35,7 @@ fix the fAQ its all missing plus fix my css its override ill send it here later 
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <!-- AOS CSS -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
 
 
 
@@ -608,43 +604,7 @@ fix the fAQ its all missing plus fix my css its override ill send it here later 
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach(item => {
-      item.querySelector('.faq-toggle').addEventListener('click', () => {
-        item.classList.toggle('faq-active');
-
-        const content = item.querySelector('.faq-content');
-        if (item.classList.contains('faq-active')) {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-          content.style.maxHeight = null;
-        }
-      });
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-      const toggle = item.querySelector('.faq-toggle');
-      toggle.addEventListener('click', () => {
-        item.classList.toggle('faq-active');
-        const content = item.querySelector('.faq-content');
-        if (item.classList.contains('faq-active')) {
-          content.style.display = 'block';
-          toggle.classList.add('bi-chevron-down');
-          toggle.classList.remove('bi-chevron-right');
-        } else {
-          content.style.display = 'none';
-          toggle.classList.add('bi-chevron-right');
-          toggle.classList.remove('bi-chevron-down');
-        }
-      });
-    });
-  });
 </script>
   
 
@@ -655,43 +615,9 @@ fix the fAQ its all missing plus fix my css its override ill send it here later 
  </main>
 <script src="script.js"></script>
 <script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
   <script>
-   const lightbox = GLightbox({ selector: '.glightbox' });
-   AOS.init(); // initialize after the DOM is loaded
 
-
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const faqItems = document.querySelectorAll(".faq-item");
-
-    faqItems.forEach(item => {
-      item.querySelector(".faq-toggle").addEventListener("click", () => {
-        item.classList.toggle("faq-active");
-      });
-    });
-  });
-
-
-
-    const typed = document.querySelector('.typed');
-    if (typed) {
-      let typed_strings = typed.getAttribute('data-typed-items');
-      typed_strings = typed_strings.split(', ');
-      new Typed('.typed', {
-        strings: typed_strings,
-        typeSpeed: 100,
-        backSpeed: 50,
-        backDelay: 2000,
-        loop: true
-      });
-    }
 
      const toggle = document.getElementById("darkModeToggle");
     toggle.addEventListener("click", () => {
