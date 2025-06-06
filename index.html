@@ -33,6 +33,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
 
 
@@ -596,6 +599,8 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
@@ -609,7 +614,31 @@
 <script src="script.js"></script>
 <script src="assets/vendor/typed.js/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
+   const lightbox = GLightbox({ selector: '.glightbox' });
+   AOS.init(); // initialize after the DOM is loaded
+// Initialize Isotope after DOM is ready
+  document.addEventListener("DOMContentLoaded", function () {
+    const grid = document.querySelector('.isotope-container');
+    if (grid) {
+      const iso = new Isotope(grid, {
+        itemSelector: '.isotope-item',
+        layoutMode: 'masonry'
+      });
+
+      // filter items on click
+      document.querySelectorAll('.portfolio-filters li').forEach((button) => {
+        button.addEventListener('click', function () {
+          document.querySelector('.filter-active')?.classList.remove('filter-active');
+          this.classList.add('filter-active');
+          const filterValue = this.getAttribute('data-filter');
+          iso.arrange({ filter: filterValue });
+        });
+      });
+    }
+  });
   document.addEventListener("DOMContentLoaded", function () {
     const faqItems = document.querySelectorAll('.faq-item');
 
