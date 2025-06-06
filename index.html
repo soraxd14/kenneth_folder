@@ -623,46 +623,6 @@
       });
     });
   });
-</script>
-  
-
-</body>
-
-</html>
-
- </main>
-<script src="script.js"></script>
-<script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-  <script>
-   const lightbox = GLightbox({ selector: '.glightbox' });
-   AOS.init(); // initialize after the DOM is loaded
-// Initialize Isotope after DOM is ready
-  document.addEventListener("DOMContentLoaded", function () {
-    const grid = document.querySelector('.isotope-container');
-    if (grid) {
-      const iso = new Isotope(grid, {
-        itemSelector: '.isotope-item',
-        layoutMode: 'masonry'
-      });
-
-      // filter items on click
-      document.querySelectorAll('.portfolio-filters li').forEach((button) => {
-        button.addEventListener('click', function () {
-          document.querySelector('.filter-active')?.classList.remove('filter-active');
-          this.classList.add('filter-active');
-          const filterValue = this.getAttribute('data-filter');
-          iso.arrange({ filter: filterValue });
-        });
-      });
-    }
-  });
   document.addEventListener("DOMContentLoaded", function () {
     const faqItems = document.querySelectorAll('.faq-item');
 
@@ -683,6 +643,28 @@
       });
     });
   });
+</script>
+  
+
+</body>
+
+</html>
+
+ </main>
+<script src="script.js"></script>
+<script src="assets/vendor/typed.js/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <script>
+   const lightbox = GLightbox({ selector: '.glightbox' });
+   AOS.init(); // initialize after the DOM is loaded
+
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const faqItems = document.querySelectorAll(".faq-item");
