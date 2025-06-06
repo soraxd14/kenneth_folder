@@ -660,6 +660,18 @@
     });
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item => {
+      item.querySelector(".faq-toggle").addEventListener("click", () => {
+        item.classList.toggle("faq-active");
+      });
+    });
+  });
+
+
+
     const typed = document.querySelector('.typed');
     if (typed) {
       let typed_strings = typed.getAttribute('data-typed-items');
