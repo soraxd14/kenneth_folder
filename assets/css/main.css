@@ -19,6 +19,19 @@ img {
   }
 }
 
+.faq-content {
+  display: none;
+  padding-top: 10px;
+}
+.faq-item.faq-active .faq-content {
+  display: block;
+}
+.faq-toggle {
+  cursor: pointer;
+  float: right;
+}
+
+
 button, a {
   padding: 12px 20px;
   font-size: 1rem;
